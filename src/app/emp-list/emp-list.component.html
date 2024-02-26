@@ -1,0 +1,33 @@
+<p>emp-list works!</p>
+<h2 class="text-primary">Get all data from APi</h2>
+
+<table>
+  <tr>
+    <th>EmpId</th>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>Address</th>
+    <th>City</th>
+  </tr>
+  <tr *ngFor="let emp of emps">
+    <td>{{emp.EmpID}}</td>
+    <td>{{emp.FirstName}}</td>
+    <td>{{emp.LastName}}</td>
+    <td>{{emp.Email}}</td>
+    <td>{{emp.Mobile}}</td>
+    <td>{{emp.Address}}</td>
+    <td>{{emp.City}}</td>
+    <td>
+        
+        <button (click)="empDetails(emp.EmpID)" class="btn btn-primary">Details</button>
+        <button (click)="editDetails(emp.EmpID)" class="btn btn-warning me-2 ms-2">Edit</button>
+        <button (click)="removeEmp(emp.EmpID)" class="btn btn-danger">Delete</button>
+    
+    </td>
+  </tr>
+
+</table>
+
+
